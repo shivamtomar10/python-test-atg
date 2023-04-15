@@ -1,8 +1,5 @@
 import requests
-import unittest
 
-class TestAGTWorld(unittest.TestCase):
-    def test_website_status_code(self):
-        url = 'https://agt.world'
-        response = requests.get(url)
-        self.assertEqual(response.status_code, 200)
+def test_connect_to_agt_world():
+    response = requests.get('https://agt.world')
+    assert response.status_code == 200
